@@ -1,0 +1,5 @@
+PRIVATE_KEY = "0x07c59b686a456a8792b568359bb750f992a5dacd0da5e4842ed100d039ba9da7";
+
+module.exports = {
+  PRIVATE_KEY,
+};
