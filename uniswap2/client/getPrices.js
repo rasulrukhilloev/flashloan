@@ -1,17 +1,17 @@
-const ethers = require("ethers");
+const ethers = require('ethers');
 
 const {
   addressFrom,
   addressTo,
   addressFactory,
   addressRouter,
-} = require("./addressList");
+} = require('./addressList');
 
-const { erc20, factoryABI, pairAbi, routerAbi } = require("./abiList");
+const { erc20, factoryABI, pairAbi, routerAbi } = require('./abiList');
 
 // Strandard Provider
 const provider = new ethers.providers.JsonRpcProvider(
-  "https://bsc-dataseed.binance.org/"
+  'https://eth-mainnet.g.alchemy.com/v2/uTmQDs8Y1PQXGcHP4NGmEDTYpclCoYpy'
 );
 
 //Connect to Factory
@@ -21,7 +21,7 @@ const contractFactory = new ethers.Contract(
   provider
 );
 
-//Connect to Router
+//Connect to Routerß
 const contractRouter = new ethers.Contract(addressRouter, routerAbi, provider);
 
 //Call the Blockchain
@@ -52,6 +52,6 @@ const getPrices = async (amountInHuman) => {
   console.log(amountOutHuman);
 };
 
-const amountInHuman = "500";
+const amountInHuman = '1';
 
 getPrices(amountInHuman);
